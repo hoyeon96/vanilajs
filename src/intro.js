@@ -78,3 +78,32 @@ console.log(t);
 const value2 = !((true && false) || (true && false) || !false);
 console.log(value2);
 //논리 연산자의 우선순위는 not -> and -> or
+
+// 과제2
+// 각각의 예제를 작성하여 생각하는 바가 정확히 나오는지 확인해보자 (과제2)
+
+let num1 = 7;
+let num2 = 5;
+let num3 = 9;
+let num4 = 1;
+let calc = 3;
+
+num1 += calc; // 10
+num2 -= calc; // 2
+num3 /= calc; // 3
+num4 *= calc; // 3
+
+console.log(num1);
+console.log(num2);
+console.log(num3);
+console.log(num4);
+
+let numpre1 = 5;
+let numpre2 = 6;
+let numpos1 = 7;
+let numpos2 = 8;
+
+console.log(++numpre1); // 6
+console.log(--numpre2); // 5
+console.log(numpos1++); // 7
+console.log(numpos2--); // 8

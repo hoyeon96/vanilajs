@@ -59,3 +59,23 @@ switch (device) {
   default:
     console.log("모르겠네요..");
 }
+
+// 과제 3
+// ==과 ===는 무슨 차이가 있는것인가?
+// 예시를 들어 구분 할 수 있도록 하자.
+
+let val1 = 2;
+let val2 = "2";
+let val3 = 22;
+
+const diff1 = val1 == val2; // true
+const diff2 = val1 === val2;
+// 값은 각각 2로 같지만 val1의 타입은 숫자, val2의 타입은 문자형
+// 이므로 false
+
+const diff3 = 0 === false; // false
+const diff4 = 0 == false; // true
+console.log(diff1);
+console.log(diff2);
+console.log(diff3);
+console.log(diff4);

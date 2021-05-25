@@ -29,3 +29,8 @@ console.log(object.length);
 // 객체 안에 배열 넣기
 // 객체 안에 객체 넣기
 // 선언 후 각각의 값을 불러내는 연습하기
+
+const arinar = ["김태훈", "바보", ["윤호연", "더", "바보"]];
+const arinst = [{}];
+const stinar = {};
+const stinst = {};

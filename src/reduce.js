@@ -21,6 +21,7 @@ console.log(sum);
 // 성능향상을 위해 사용
 
 //과제 7번
+
 function countBiggerThanTen(numbers) {
   /* 구현해보세요 */
 }

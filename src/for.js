@@ -58,6 +58,14 @@ console.log(result2);
 // 과제 6
 function biggerThanThree(numbers) {
   /* 구현해보세요 */
+  let bt3 = [];
+  let j = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 3) {
+      bt3[j++] = numbers[i];
+    }
+  }
+  return bt3;
 }
 
 const numberarray = [1, 2, 3, 4, 5, 6, 7];

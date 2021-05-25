@@ -35,3 +35,14 @@ console.log(add(1, 2));
 // 과제 4
 // 과연 => 로 만든 함수와 function으로 만든 함수는 정말 같은것인가?
 // 차이가 있다면 어떠한 차이가 있는지 예시를 들어보자!
+
+function plus(a, b) {
+  const sum = a + b;
+  return sum;
+}
+console.log(plus(3, 5));
+
+const plus2 = (a, b) => {
+  return a + b;
+};
+console.log(plus2(3, 5));
