@@ -12,19 +12,20 @@ var student1 = {
 // console.log(student1);
 
 function student(id, score, att, common) {
-  this.id = id;
-  this.score = score;
-  this.att = att;
-  this.common = common;
+  this.id = idmaker();
+  this.score = scoremaker(0, 100);
+  let attresult = attmaker();
+  this.att = attresult[0];
+  this.common = attresult[1];
   // this.prize = ;
   // this.goodgrade = ;
   // this.badgrade = ;
   // this.resultgrade = ;
 }
 
-function idmaker(n) {
+function idmaker() {
   let str = "";
-  for (let i = 0; i < n; i++) {
+  for (var i = 0; i < 8; i++) {
     str += Math.floor(Math.random() * 10);
   }
   return str;
@@ -40,7 +41,6 @@ function scoremaker(min, max) {
     }
   }
 }
-console.log(scoremaker(0, 100));
 
 function attmaker() {
   let att = Math.floor(Math.random() * (10 - 1 + 1) + 1);
@@ -50,4 +50,10 @@ function attmaker() {
   }
   return commaker();
 }
-console.log(attmaker());
+
+const studentlist = [];
+for (var i = 0; i < 50; i++) {
+  studentlist[i] = new student();
+}
+
+console.log(studentlist);
