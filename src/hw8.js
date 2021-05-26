@@ -9,7 +9,7 @@ var student1 = {
   resultgrde: "" // good pro vs bad pro 중 더 잘한거
 };
 
-console.log(student1);
+// console.log(student1);
 
 function student(id, score, att, common) {
   this.id = id;
@@ -40,3 +40,14 @@ function scoremaker(min, max) {
     }
   }
 }
+console.log(scoremaker(0, 100));
+
+function attmaker() {
+  let att = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+  function commaker() {
+    let com = Math.floor(Math.random() * (att - 1 + 1) + 1);
+    return [att, com];
+  }
+  return commaker();
+}
+console.log(attmaker());
