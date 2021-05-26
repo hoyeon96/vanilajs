@@ -75,7 +75,11 @@ const diff2 = val1 === val2;
 
 const diff3 = 0 === false; // false
 const diff4 = 0 == false; // true
+const diff5 = "1" === true; // false
+const diff6 = "1" == true; // true
 console.log(diff1);
 console.log(diff2);
 console.log(diff3);
 console.log(diff4);
+console.log(diff5);
+console.log(diff6);
