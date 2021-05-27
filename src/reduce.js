@@ -26,13 +26,23 @@ function countBiggerThanTen(numbers) {
   /* 구현해보세요 */
   let count = 0;
   numbers.forEach((n) => {
-    if (n > 10) {
-      count += 1;
-    }
+    if (n > 10) count++;
   });
 
   return count;
 }
 
-const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
+const count = countBiggerThanTen([
+  11,
+  22,
+  41,
+  413,
+  5112,
+  0.7,
+  -9,
+  -113,
+  0.03,
+  11.7
+]);
+
 console.log(count); // 5

@@ -56,6 +56,11 @@ const result2 = sumOf(numbers);
 console.log(result2);
 
 // 과제 6
+// 과제 6-1
+// 1. bt3 배열 새로 만들지 않기
+// 2. 오름차순 출력하기
+//  구현해보고 sort를 이용해서 정렬해보기
+// 3. 없으면 NULL
 function biggerThanThree(numbers) {
   /* 구현해보세요 */
   let bt3 = [];
@@ -65,9 +70,21 @@ function biggerThanThree(numbers) {
       bt3[j++] = numbers[i];
     }
   }
+  // let temp;
+
+  // for (var i = 0; i < bt3.length; i++) {
+  //   if (bt3[i] > bt3[i + 1]) {
+  //     temp = bt3[i + 1];
+  //     bt3[i + 1] = bt3[i];
+  //     bt3[i] = temp;
+  //   }
+  // }
+
   return bt3;
 }
 
-const numberarray = [1, 2, 3, 4, 5, 6, 7];
-console.log(biggerThanThree(numberarray));
+const numberarray = [2, 2, 2, 3, 4, 4, 3.1, 3.2, 7, 10, 8, 6, 7];
+// 3 3 1 2
+// 3 1 2 3
+console.log(biggerThanThree(numberarray).sort());
 // [4,5,6,7] 배열로 출력되도록
