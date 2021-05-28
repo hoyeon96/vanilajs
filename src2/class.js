@@ -62,3 +62,9 @@ chicken.print();
 // 클래스 만들기
 // 대학교 학생
 // 전공, 학번, 학점, ~~
+
+const student {
+  constructor(ddd, ttt, asdf){
+
+  }
+}

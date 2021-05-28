@@ -63,28 +63,34 @@ console.log(result2);
 // 3. 없으면 NULL
 function biggerThanThree(numbers) {
   /* 구현해보세요 */
-  let bt3 = [];
-  let j = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] > 3) {
-      bt3[j++] = numbers[i];
-    }
-  }
-  // let temp;
-
-  // for (var i = 0; i < bt3.length; i++) {
-  //   if (bt3[i] > bt3[i + 1]) {
-  //     temp = bt3[i + 1];
-  //     bt3[i + 1] = bt3[i];
-  //     bt3[i] = temp;
+  // let bt3 = [];
+  // let j = 0;
+  // for (let i = 0; i < numbers.length; i++) {
+  //   if (numbers[i] > 3) {
+  //     bt3[j++] = numbers[i];
   //   }
   // }
+  const bt3 = numbers.filter((n) => n > 3);
 
+  for (let i = 0; i < bt3.length; i++) {
+    let temp;
+    for (let j = 0; j < bt3.length - 1 - i; j++) {
+      if (bt3[j] - bt3[j + 1] > 0) {
+        temp = bt3[j];
+        bt3[j] = bt3[j + 1];
+        bt3[j + 1] = temp;
+      }
+    }
+    if (!temp) {
+      break;
+    }
+  }
+  if (bt3.length === 0) return null;
   return bt3;
 }
 
-const numberarray = [2, 2, 2, 3, 4, 4, 3.1, 3.2, 7, 10, 8, 6, 7];
+const numberarray = [5, 4, 2, 3];
 // 3 3 1 2
 // 3 1 2 3
-console.log(biggerThanThree(numberarray).sort());
-// [4,5,6,7] 배열로 출력되도록
+
+console.log(biggerThanThree(numberarray));
