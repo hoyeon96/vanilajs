@@ -63,8 +63,40 @@ chicken.print();
 // 대학교 학생
 // 전공, 학번, 학점, ~~
 
-const student {
-  constructor(ddd, ttt, asdf){
-
+class Student {
+  constructor(major, id, name, score) {
+    this.major = major;
+    this.id = id;
+    this.name = name;
+    this.score = score;
+  }
+  say() {
+    console.log(`${this.name} 학생의 학점은 ${this.score}입니다.`);
   }
 }
+
+class businessStudent extends Student {
+  constructor(id, name, score) {
+    super("경영학과", id, name, score);
+  }
+}
+
+class computerStudent extends Student {
+  constructor(id, name, score) {
+    super("컴퓨터공학과", id, name, score);
+  }
+}
+
+class elecStudent extends Student {
+  constructor(id, name, score) {
+    super("전자공학과", id, name, score);
+  }
+}
+
+const stud1 = new businessStudent("201421450", "윤호연", "A0");
+const stud2 = new computerStudent("111", "김태훈", "A+++");
+const stud3 = new elecStudent("202020202", "김탈주", "C+");
+
+stud1.say();
+stud2.say();
+stud3.say();
