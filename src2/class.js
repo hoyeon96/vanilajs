@@ -12,6 +12,7 @@ class Animal {
 const dog = new Animal("개", "블랙", "멍!");
 const cat = new Animal("고양이", "키티", "냥~");
 
+console.log(dog);
 dog.say();
 cat.say();
 
