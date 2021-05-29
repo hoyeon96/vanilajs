@@ -49,6 +49,11 @@ class student {
       return "F";
     }
   }
+  badProf(prize) {
+    if (this.att - this.com >= 5) return "F";
+    let temp = studentList.length;
+    console.log(temp);
+  }
 }
 
 // ID 생성
@@ -70,12 +75,16 @@ for (let i = 0; i < 50; i++) {
 let att = maker(0, 10, 50);
 
 // 유고결석 생성 및 50명 난수배치
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 3; i++) {
   let com = maker(0, att[i], 1);
   studentList[i] = new student(id[i], score[i], att[i], com[0]);
 
   // calScore[i] = calculateScore(score[i], att[i]);
   calScore[i] = studentList[i].calcScore();
+  studentList[i].goodGrade = studentList[i].goodProf(calScore[i]);
+  studentList[i].badGrade = studentList[i].badProf(studentList[i].prize);
+
+  studentList[i].resultGrade = "";
 }
 // 학생 리스트 점수로 랭킹 매기기
 ranking(calScore);
@@ -89,17 +98,17 @@ function ranking(arr) {
   let ranks = arr.map(function (v) {
     return sorted.indexOf(v) + 1;
   });
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 3; i++) {
     studentList[i].prize = ranks.shift();
   }
 }
 
 console.log(calScore);
 console.log(studentList);
-console.log(studentList[0].score);
-console.log(studentList[0].goodProf());
-console.log(studentList[1].goodProf());
-console.log(studentList[2].goodProf());
-console.log(studentList[3].goodProf());
-console.log(studentList[4].goodProf());
-console.log(studentList[5].goodProf());
+
+// console.log(studentList[0].score);
+// console.log(studentList[0].calcScore());
+// console.log(studentList[0].goodProf());
+console.log(studentList[0].badProf());
+
+console.log(studentList.length);
