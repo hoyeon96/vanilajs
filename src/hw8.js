@@ -1,34 +1,3 @@
-var student1 = {
-  id: "10000001",
-  score: 80,
-  att: 3,
-  common: 1,
-  prize: "",
-  goodgrade: "", // good pro 채점
-  badgrade: "", // bad pro  채점
-  resultgrde: "" // good pro vs bad pro 중 더 잘한거
-};
-var student2 = {
-  id: "10000152",
-  score: 70,
-  att: 5,
-  common: 5,
-  prize: "",
-  goodgrade: "", // good pro 채점
-  badgrade: "", // bad pro  채점
-  resultgrde: "" // good pro vs bad pro 중 더 잘한거
-};
-var student3 = {
-  id: "100000079",
-  score: 90,
-  att: 7,
-  common: 0,
-  prize: "",
-  goodgrade: "", // good pro 채점
-  badgrade: "", // bad pro  채점
-  resultgrde: "" // good pro vs bad pro 중 더 잘한거
-};
-
 // 난수생성 함수
 function maker(min, max, count) {
   let number = [];
@@ -79,8 +48,6 @@ class student {
     } else {
       return "F";
     }
-
-    console.log(score);
   }
 }
 

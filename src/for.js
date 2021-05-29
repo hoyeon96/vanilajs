@@ -59,37 +59,35 @@ console.log(result2);
 // 과제 6-1
 // 1. bt3 배열 새로 만들지 않기
 // 2. 오름차순 출력하기
-//  구현해보고 sort를 이용해서 정렬해보기
 // 3. 없으면 NULL
 function biggerThanThree(numbers) {
   /* 구현해보세요 */
-  // let bt3 = [];
-  // let j = 0;
-  // for (let i = 0; i < numbers.length; i++) {
-  //   if (numbers[i] > 3) {
-  //     bt3[j++] = numbers[i];
+
+  //  구현해보고 sort를 이용해서 정렬해보기
+  const bt3 = numbers
+    .filter((n) => n > 3)
+    .sort(function (a, b) {
+      return a - b;
+    });
+
+  // for (let i = 0; i < bt3.length; i++) {
+  //   let temp;
+  //   for (let j = 0; j < bt3.length - 1 - i; j++) {
+  //     if (bt3[j] - bt3[j + 1] > 0) {
+  //       temp = bt3[j];
+  //       bt3[j] = bt3[j + 1];
+  //       bt3[j + 1] = temp;
+  //     }
+  //   }
+  //   if (!temp) {
+  //     break;
   //   }
   // }
-  const bt3 = numbers.filter((n) => n > 3);
-
-  for (let i = 0; i < bt3.length; i++) {
-    let temp;
-    for (let j = 0; j < bt3.length - 1 - i; j++) {
-      if (bt3[j] - bt3[j + 1] > 0) {
-        temp = bt3[j];
-        bt3[j] = bt3[j + 1];
-        bt3[j + 1] = temp;
-      }
-    }
-    if (!temp) {
-      break;
-    }
-  }
   if (bt3.length === 0) return null;
   return bt3;
 }
 
-const numberarray = [5, 4, 2, 3];
+const numberarray = [6, 5, 2, 3, 5, 4];
 // 3 3 1 2
 // 3 1 2 3
 
